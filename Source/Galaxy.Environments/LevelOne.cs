@@ -40,6 +40,16 @@ namespace Galaxy.Environments
 
         Actors.Add(ship);
       }
+      for (int i = 0; i < 5; i++)
+      {
+          var starship = new Starship(this);
+          int positionY = starship.Height + 30;
+          int positionX = 170 + i * (starship.Width + 50);
+
+          starship.Position = new Point(positionX, positionY);
+
+          Actors.Add(starship);
+      }
 
       // Player
       Player = new PlayerShip(this);
